@@ -1,0 +1,396 @@
+/* sets all text font */
+* { 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+/* animation for elements to slide in from the right */
+.slide-right {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 1s;
+}   
+
+/* animation for elements to slide in from the top */
+.slide-down {
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: all 1s;
+}
+
+/* end of animation */
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* changes width of entire scrollbar */
+::-webkit-scrollbar {
+    width: 1rem;
+}
+
+/* changes background colour of scrollbar */
+::-webkit-scrollbar-track {
+    background-color: #d7fbe8;
+}
+
+/* changes size and colour of scrollbar */
+::-webkit-scrollbar-thumb {
+    background-color: #1fab89;
+    border-radius: 4px;
+}
+
+/* changes colour of scrollbar on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #62d2a2;
+}
+
+/* changes colour, size and arrangement of nav */
+nav {
+    background-color: #d7fbe8;
+    display: flex;
+    height: 10vh;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem calc((100vw - 1300px) / 2);
+}
+
+/* changes style of nav anchors */
+nav a {
+    color: #1fab89;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+/* changes colour of nav anchors on hover */
+nav a:hover {
+    color: #62d2a2;
+}
+
+/* changes style of nav button */
+nav button {
+    background-color: #1fab89;
+    color: white;
+    padding: 12px;
+    border-radius: 4px;
+    border-style: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* changes colour of nav button on hover */
+nav button:hover {
+    background-color: #62d2a2;
+}
+
+/* changes style of nav dropdown list */
+nav ul {
+    list-style: none;
+    text-align: start;
+}
+
+/* changes arrangemnet of nav dropdown list */
+.nav-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* makes content of dropdown list invisible */
+.nav-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #d7fbe8;
+    z-index: -1;
+}
+
+/* changes style of nav dropdown list contents */
+.nav-dropdown-content li {
+    padding-top: 1rem;
+}
+
+/* makes content of dropdown list visible when hovering over the Demo*/
+.nav-dropdown:hover .nav-dropdown-content {
+    display: block;
+}
+
+/* changes size of nav image (logo) */
+nav img {
+    max-width: 10%;
+    height: auto;
+}
+
+/* changes colour and size of home container */
+.home-container {
+    background-color: #d7fbe8;
+    display: flex;
+    height: 50vh;
+    padding: calc((100vw - 1300px) / 2);
+    padding-top: 10rem;
+}
+
+/* changes style of home text */
+.home-text {
+    color: #1fab89;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 32px;
+}
+
+/* changes style of home text button */
+.home-text button {
+    background-color: #1fab89;
+    color: white;
+    padding: 12px;
+    margin-top: 16px;
+    border-radius: 4px;
+    border-style: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* changes colour of home text button on hover */
+.home-text button:hover {
+    background-color: #62d2a2;
+}
+
+/* colour and size of home image container */
+.home-image-container {
+    background-color: #d7fbe8;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* changes size of home image */
+.home-image {
+    max-width: 90%;
+    height: auto;
+}
+
+/* changes colour and size of home container2 */
+.home-container2 {
+    background-color: #d7fbe8;
+    display: flex;
+    height: 20vh;
+    padding: 5rem calc((100vw - 1300px) / 2);
+    justify-content: center;
+    text-align: center;
+}
+
+/* changes style of home text2 */
+.home-text2 {
+    flex-direction: column;
+    align-items: center;
+    color: #1fab89;
+    display: flex;
+    font-size: 32px;
+}
+
+/* changes style of home text2 button */
+.home-text2 button{
+    background-color: #1fab89;
+    color: white;
+    padding: 12px;
+    margin-top: 32px;
+    border-radius: 4px;
+    border-style: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* changes colour of home text2 button on hover */
+.home-text2 button:hover {
+    background-color: #62d2a2;
+}
+
+
+/* changes colour and size of home image container2 */
+.home-image-container2 {
+    background-color: #d7fbe8;
+    display: flex;
+    justify-content: center;
+}
+
+/* changes size of home image2 */
+.home-image2 {
+    display: flex;
+    object-fit: contain;
+    height: 70%;
+    width: 70%;
+}
+
+/* changes colour and size of home container3 */
+.home-container3 {
+    background-color: #d7fbe8;
+    display: flex;
+    height: 40vh;
+    padding: 3rem calc((100vw - 1300px) / 2);
+
+}
+
+/* changes style of home text3 */
+.home-text3 {
+    display: flex;
+    flex-direction: column;
+    color: #1fab89;
+    font-size: 24px;
+    max-width: 40%;
+    padding-left: 11rem;
+}
+
+/* changes size of home image3 */
+.home-image3 {
+    display: flex;
+    background-color: #d7fbe8;
+    object-fit: contain;
+    height: 70%;
+    width: 70%;
+}
+
+/* changes colour, size and arrangement of footer */
+footer {
+    background-color: #d7fbe8;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 8rem calc((100vw - 1300px) / 2);
+}
+
+/* changes size of footer logo */
+.logo {
+    max-width: 10%;
+    height: auto;
+}
+
+/* changes style of foot text anchors */
+.foot-text a {
+    color: #1fab89;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10rem;
+    text-decoration: none;
+}
+
+/* changes colour of foot text anchors on hover */
+.foot-text a:hover {
+    color: #62d2a2;
+}
+
+/* changes size of foot text paragraphs */
+.foot-text p {
+    padding: 0.5rem;
+}
+
+/* media query to make the website responsive (descriptions for all the classes are the same)*/
+@media (max-width: 1024px) {
+    
+    nav {
+        padding: 0rem 3rem;     
+    }
+
+    nav a, button {
+        font-size: 32px;
+    }
+
+    nav img {
+        max-width: 20%;
+        height: auto;
+    }
+
+    nav button {
+        font-size: 32px;
+    }
+
+    .home-container {
+        flex-direction: column;
+        padding: 3rem;
+        align-items: flex-start;
+        text-align: center;
+        height: auto;
+        padding-bottom: 0rem;
+    }
+
+    .home-text {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        max-width: 90%;
+        margin: auto;
+        font-size: 64px;
+    }
+
+    .home-image-container {
+        justify-content: center;
+    }
+
+    .home-image {
+        max-width: 100%;
+    }
+
+    .home-container2 {
+        height: auto;
+    }
+
+    .home-text2 {
+        max-width: 90%;
+        margin: auto;
+        font-size: 64px;
+    }
+
+    .home-container3 {
+        background-color: #d7fbe8;
+        height: auto;
+        align-items: center;
+    }
+
+    .home-text3 {
+        font-size: 64px;
+        max-width: 50%;
+    }
+
+    .home-image2 {
+        background-color: #d7fbe8;
+        width: 40%;
+        height: 40%;
+        object-fit: none;
+    }
+
+    .home-image-container2 {
+        background-color: #d7fbe8;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .home-image3 {
+        width: 100%;
+        height: 100%;
+        padding: 3rem 0rem;
+    }
+
+    .home-text button {
+        margin-top: 32px;
+        font-size: 32px;
+    }
+
+    .home-text2 button {
+        margin-top: 32px;
+        font-size: 32px;
+    }
+
+    footer {    
+        padding: 1rem calc((100vw - 1300px) / 2);
+    }
+
+    .logo {
+        max-width: 20%;
+        height: auto;
+    }
+
+    .foot-text a {
+        padding-left: 8rem;
+        font-size: 32px;
+    }
+}
