@@ -19,6 +19,13 @@
     transition: all 1s;
 }
 
+/* animation for elements to slide in from the bottom */
+.slide-up {
+    opacity: 0;
+    transform: translateY(200%);
+    transition: all 1s;
+}
+
 /* end of animation */
 .show {
     opacity: 1;
@@ -330,6 +337,77 @@ nav img {
 
 /* changes colour of about text3 anchor on hover */
 .about-text3 a:hover {
+    background-color: #62d2a2;
+}
+
+/* changes colour, size and arrangement of join container */
+.join-container {
+    background-color: #d7fbe8;
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    padding-top: 5rem;
+}
+
+/* changes style and arrangement of join text */
+.join-text {
+    background-color: #d7fbe8;
+    color: #1fab89;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 32px;
+    padding: 2rem 0rem;
+}
+
+/* changes size of join text h1 */
+.join-text h1{
+    max-width: 50%;
+}
+
+/* changes colour and arrangement of line */
+.join-textline {
+    display: flex;
+    background-color: #d7fbe8;
+    justify-content: center;
+}
+
+/* changes colour and style of area to input text */
+.join-textline input{
+    background-color: #d7fbe8;
+    color: #1fab89;
+    outline: none;
+    outline-style: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid #1fab89 2px;
+    padding: 0rem 1rem;
+    font-size: 32px;
+    text-align: center;
+}
+
+/* changes colour and arrangement of join button container */
+.join-button-container {
+    display: flex;
+    background-color: #d7fbe8;
+    justify-content: center;
+}
+
+/* changes style of join button (go to next page button) */
+.join-button {
+    background-color: #1fab89;
+    color: white;
+    padding: 12px;
+    margin-top: 48px;
+    border-radius: 4px;
+    border-style: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* changes colour of join button (go to next page button) on hover */
+.join-button:hover {
     background-color: #62d2a2;
 }
 

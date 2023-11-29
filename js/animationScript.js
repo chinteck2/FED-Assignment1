@@ -16,3 +16,6 @@ hiddenElements.forEach((el) => observer.observe(el));
 
 const hiddenElements2 = document.querySelectorAll('.slide-down');
 hiddenElements2.forEach((el) => observer.observe(el));
+
+const hiddenElements3 = document.querySelectorAll('.slide-up');
+hiddenElements3.forEach((el) => observer.observe(el));
