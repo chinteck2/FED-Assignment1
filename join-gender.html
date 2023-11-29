@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Join-Us-Gender</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./js/animationScript.js"></script>
+</head>
+<body>
+
+    <header> <!-- website header -->
+        <nav> <!-- website nav bar -->
+
+            <!-- logo -->
+            <img class="slide-down" src="./images/studie-logo.png" alt="image of the Studie logo">
+            
+            <!-- nav bar anchors/buttons -->
+            <div class="slide-down">
+                <a href="./home.html">Home</a>
+
+                <!-- nav bar dropdown list -->
+                <div class="nav-dropdown">
+                    <a href="./demo-notes.html">Demo</a>
+                    <div class="nav-dropdown-content">
+                        <ul>
+                            <li><a href="./demo-notes.html">Notes</a></li>
+                            <li><a href="./demo-flashcards.html">Flashcards</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <a href="./about.html"><b>About</b></a>
+                <button>Download</button>
+            </div>
+        </nav>
+    </header>
+
+    <section> <!-- join-gender section -->
+
+        <!-- join us text -->
+        <div class="join-text">
+            <h1 class="slide-up">Join Us</h1>
+        </div>
+
+        <!-- gender text -->
+        <div class="join-container">
+            <div class = "join-text">
+                <h1 class="slide-up">Your Gender:</h1>
+            </div>
+
+            <!-- (form) choices for user -->
+            <form action="./join-end.html">
+                <div class="join-radio">
+                    <input required type="radio" class="join-radio slide-up" name="one-choice">
+                    <label class="slide-up">Male</label>
+                    <input required type="radio" class="join-radio slide-up" name="one-choice">
+                    <label class="slide-up">Female</label>
+                    <input required type="radio" class="join-radio slide-up" name="one-choice">
+                    <label class="slide-up">Others</label>
+                </div>
+
+                <!-- next submit button -->
+                <div class="join-button-container">
+                    <input class="join-button slide-up" type="submit">
+                </div>          
+            </form>
+        </div>
+    </section>
+
+    <footer> <!-- website footer -->
+
+        <!-- logo -->
+        <img class="logo" src="./images/studie-logo.png" alt="image of the Studie logo">
+
+        <!-- footer demo anchors -->
+        <div class="foot-text">
+            <a href="./demo-notes.html"><p>Demo</p></a>
+            <a href="./demo-notes.html"><p>Notes</p></a>
+            <a href="./demo-flashcards.html"><p>Flashcards</p></a>
+        </div>
+
+        <!-- footer about anchors -->
+        <div class="foot-text">
+            <a href="./about.html"><p><b>About</b></p></a>
+            <a href="./about.html"><p>Our Story</p></a>
+            <a href="./about.html"><p>Our Mission</p></a>
+            <a href="./about.html"><p><b>Join Us</b></p></a>
+        </div>
+    </footer>
+</body>
+</html>
