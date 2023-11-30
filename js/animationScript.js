@@ -10,7 +10,7 @@ const observer =  new IntersectionObserver((entries) => {
     });
 });
 
-//giving elements with classes .slide-right and .slide-down .show when they are seen on screen
+//giving elements with classes .slide-right, .slide-down and .slide-up .show when they are seen on screen
 const hiddenElements = document.querySelectorAll('.slide-right');
 hiddenElements.forEach((el) => observer.observe(el));
 

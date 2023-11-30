@@ -1,3 +1,4 @@
+//exporting class notesContent
 export default class notesContent {
     constructor(root, { onNoteSelect, onNoteAdd, onNoteEdit, onNoteDelete } = {}) {
         this.root = root;
@@ -16,14 +17,17 @@ export default class notesContent {
             </div>
         `;
 
+        //getting elements with classes .notes-add-button, .notes-content-title and .notes-content-body
         const addNote = this.root.querySelector(".notes-add-button");
         const inputTitle = this.root.querySelector(".notes-content-title");
         const inputBody = this.root.querySelector(".notes-content-body");
 
+        //calls onnoteAdd() on button click
         addNote.addEventListener("click", () => {
             this.onNoteAdd();
         });
 
+        //updates values of note in notes-list when user clicks off the editing area
         [inputTitle, inputBody].forEach(inputField => {
             inputField.addEventListener("blur", () => {
                 const updatedTitle = inputTitle.value.trim();
@@ -33,9 +37,12 @@ export default class notesContent {
             });
         });
 
+        //when no note items in notes-list the editing view is not visible
         this.updateNotePreviewVisibility(false);
     }
 
+    //html template for note item in notes-list
+    //if note body content exceeds 60 length further words are replaced with ...
     _createListItemHTML(id, title, body, updated) {
         const MAX_BODY_LENGTH = 60;
 
@@ -53,10 +60,10 @@ export default class notesContent {
         `;
     }
 
+    //handles inserting note item into notes-list and deleting note item from notes-list
     updateNotesList(notes) {
         const notesList = this.root.querySelector(".notes-list");
 
-        // Empty list
         notesList.innerHTML = "";
 
         for (const note of notes) {
@@ -80,6 +87,7 @@ export default class notesContent {
         });
     }
 
+    //determines which note item in notes-list is being selected
     updateActiveNote(note) {
         this.root.querySelector(".notes-content-title").value = note.title;
         this.root.querySelector(".notes-content-body").value = note.body;
@@ -92,6 +100,7 @@ export default class notesContent {
 
     }
 
+    //handles visibility of editing view
     updateNotePreviewVisibility(visible) {
         this.root.querySelector(".notes-content").style.visibility = visible ? "visible" : "hidden";
     }

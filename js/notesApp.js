@@ -1,6 +1,8 @@
+//importing notesContent and notesAPI
 import notesContent from "./notesContent.js";
 import notesAPI from "./notesAPI.js";
 
+//exporting class notesApp
 export default class notesApp {
      constructor(root) {
         this.notes = [];
@@ -10,6 +12,7 @@ export default class notesApp {
         this._refreshNotes();
      }
 
+   //refreshes the note data
    _refreshNotes() {
       const notes = notesAPI.getAllNotes();
 
@@ -38,6 +41,7 @@ export default class notesApp {
             this._setActiveNote(selectedNote);
          },
 
+         //adds default template to new note
          onNoteAdd: () => {
             const newNote = {
                title: "New Note",
@@ -49,6 +53,7 @@ export default class notesApp {
             this._refreshNotes();
          },
 
+         //edits note data
          onNoteEdit: (title, body) => {
             notesAPI.saveNote({
                id: this.activeNote.id,

@@ -1,6 +1,8 @@
+//importing flashcardsContent and flashcardsAPI
 import flashcardsContent from "./flashcardsContent.js";
 import flashcardsAPI from "./flashcardsAPI.js";
 
+//exporting class flashcardsApp
 export default class flashcardsApp {
      constructor(root) {
         this.flashcards = [];
@@ -10,6 +12,7 @@ export default class flashcardsApp {
         this._refreshFlashcards();
      }
 
+   //refreshes the flashcard data
    _refreshFlashcards() {
       const flashcards = flashcardsAPI.getAllFlashcards();
 
@@ -38,6 +41,7 @@ export default class flashcardsApp {
             this._setActiveFlashcard(selectedFlashcard);
          },
 
+         //adds default template to new flashcard
          onFlashcardAdd: () => {
             const newFlashcard = {
                title: "New Flashcard",
@@ -49,6 +53,7 @@ export default class flashcardsApp {
             this._refreshFlashcards();
          },
 
+         //edits flashcard data
          onFlashcardEdit: (title, body) => {
             flashcardsAPI.saveFlashcard({
                id: this.activeFlashcard.id,

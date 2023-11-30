@@ -1,3 +1,4 @@
+//exporting class flashcardsContent
 export default class flashcardsContent {
     constructor(root, { onFlashcardSelect, onFlashcardAdd, onFlashcardEdit, onFlashcardDelete } = {}) {
         this.root = root;
@@ -18,14 +19,17 @@ export default class flashcardsContent {
             </div>
         `;
 
+        //getting elements with classes .flashcards-add-button, .flashcards-content-title and .flashcards-content-body
         const addFlashcard = this.root.querySelector(".flashcards-add-button");
         const inputTitle = this.root.querySelector(".flashcards-content-title");
         const inputBody = this.root.querySelector(".flashcards-content-body");
 
+        //calls onFlashcardAdd() on button click
         addFlashcard.addEventListener("click", () => {
             this.onFlashcardAdd();
         });
 
+        //updates values of flashcard in flashcards-list when user clicks off the editing area
         [inputTitle, inputBody].forEach(inputField => {
             inputField.addEventListener("blur", () => {
                 const updatedTitle = inputTitle.value.trim();
@@ -35,9 +39,12 @@ export default class flashcardsContent {
             });
         });
 
+        //when no flashcard items in flashcards-list the editing view is not visible
         this.updateFlashcardPreviewVisibility(false);
     }
 
+    //html template for flashcard item in flashcards-list
+    //if flashcard body content exceeds 60 length further words are replaced with ...
     _createListItemHTML(id, title, body, updated) {
         const MAX_BODY_LENGTH = 60;
 
@@ -55,10 +62,10 @@ export default class flashcardsContent {
         `;
     }
 
+    //handles inserting flashcard item into flashcards-list and deleting flashcard item from flashcards-list
     updateFlashcardsList(flashcards) {
         const flashcardsList = this.root.querySelector(".flashcards-list");
 
-        // Empty list
         flashcardsList.innerHTML = "";
 
         for (const flashcard of flashcards) {
@@ -82,6 +89,7 @@ export default class flashcardsContent {
         });
     }
 
+    //determines which flashcard item in flashcards-list is being selected
     updateActiveFlashcard(flashcard) {
         this.root.querySelector(".flashcards-content-title").value = flashcard.title;
         this.root.querySelector(".flashcards-content-body").value = flashcard.body;
@@ -94,6 +102,7 @@ export default class flashcardsContent {
 
     }
 
+    //handles visibility of editing view
     updateFlashcardPreviewVisibility(visible) {
         this.root.querySelector(".flashcards-content").style.visibility = visible ? "visible" : "hidden";
     }

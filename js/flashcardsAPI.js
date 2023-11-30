@@ -1,12 +1,17 @@
+//exporting class flashcardsAPI
 export default class flashcardsAPI {
-    static getAllFlashcards() {
+    static getAllFlashcards() { 
+
+        //converts JSON string data into flashcardItem or an empty list and stores in local storage
         const flashcards = JSON.parse(localStorage.getItem("flashcardItem") || "[]");
 
+        //sorts the flashcards by most recently updated
         return flashcards.sort((a, b) => {
             return new Date(a.updated) > new Date(b.updated) ? -1 : 1;
         });
     }
 
+    //save flashcard data
     static saveFlashcard(flashcardToSave) {
         const flashcards = flashcardsAPI.getAllFlashcards();
         const existing = flashcards.find(flashcard => flashcard.id == flashcardToSave.id);
@@ -24,6 +29,7 @@ export default class flashcardsAPI {
         localStorage.setItem("flashcardItem", JSON.stringify(flashcards));
     }
 
+    //delete flashcard
     static deleteFlashcard(id) {
         const flashcards = flashcardsAPI.getAllFlashcards();
         const newFlashcards =  flashcards.filter(flashcard => flashcard.id != id);
