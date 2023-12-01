@@ -86,6 +86,38 @@ nav button {
     cursor: pointer;
 }
 
+/* changes style of nav button in demo notes page */
+.demo-notes-button {
+    background-color: #ea4f44;
+    color: white;
+    padding: 12px;
+    border-radius: 4px;
+    border-style: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* changes color of nav button in demo notes page on hover */
+.demo-notes-button:hover {
+    background-color: #e14133;
+}
+
+/* changes style of nav button in flashcards notes page */
+.demo-flashcards-button {
+    background-color: #faa700;
+    color: white;
+    padding: 12px;
+    border-radius: 4px;
+    border-style: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* changes color of nav button in demo flashcards page on hover */
+.demo-flashcards-button:hover {
+    background-color: #fa9e00;
+}
+
 /* changes colour of nav button on hover */
 nav button:hover {
     background-color: #333333;
@@ -241,6 +273,7 @@ nav img {
 
 }
 
+/* changes style of the example */
 .example {
     display: flex;
     flex-direction: row;
@@ -251,17 +284,20 @@ nav img {
     border: 0.4rem solid #f6f5f4;
 }
 
+/* changes arrangement of notes example, flashcards example and wikis example */
 .notes-example, .flashcards-example, .wikis-example {
     display: flex;
     flex-direction: column;
 }
 
+/* changes style of the example h1 */
 .example h1 {
     font-size: 48px;
     margin-top: 1rem;
     margin-left: 2rem;
 }
 
+/* changes style of the example p */
 .example p {
     font-size: 24px;
     margin-top: 1rem;
@@ -269,6 +305,7 @@ nav img {
     width: 22rem;
 }
 
+/* changes colour of the notes example anchor tag */
 .notes-example a {
     color: #ea4f44;
     font-size: 16px;
@@ -278,6 +315,7 @@ nav img {
     text-decoration: none;
 }
 
+/* changes colour of the flashcards example anchor tag */
 .flashcards-example a {
     color: #faa700;
     font-size: 16px;
@@ -287,6 +325,7 @@ nav img {
     text-decoration: none;
 }
 
+/* changes colour of the wikis example anchor tag */
 .wikis-example a {
     color: #0a85d1;
     font-size: 16px;
@@ -296,6 +335,7 @@ nav img {
     text-decoration: none;
 }
 
+/* changes style of the top left image in the notes example container */
 .home-notes {
     background-color: #fce9e8;
     padding: 0.5rem;
@@ -306,6 +346,7 @@ nav img {
     border-radius: 8px;
 }
 
+/* changes style of the top left image in the flashcards example container */
 .home-flashcards {
     background-color: #fff6d6;
     padding: 0.5rem;
@@ -316,6 +357,7 @@ nav img {
     border-radius: 8px;
 }
 
+/* changes style of the top left image in the wikis example container */
 .home-wikis {
     background-color: #e2ecf3;
     padding: 0.5rem;
@@ -326,8 +368,8 @@ nav img {
     border-radius: 8px;
 }
 
-.examples-image {
-    background-color: black;
+/* changes desgin and gives drop shadow to image in example */
+.example-image {
     border-radius: 16px 0px 0px 0px;
     margin-top: 2rem;
     box-shadow: 5px 5px 10px #949392;
@@ -906,6 +948,54 @@ footer {
 
     .notes-add-button, .flashcards-add-button{
         font-size: 32px;
+    }
+
+    .join-container {
+        justify-content: center;
+        padding-top: 0rem;
+    }
+
+    .join-text {
+        font-size: 64px;
+        padding-top: 0rem;
+        padding-bottom: 2rem;
+    }
+
+    .join-text h1 {
+        max-width: 90%;
+    }
+    
+    .join-button {
+        font-size: 32px;
+    }
+
+    .join-radio {
+        font-size: 64px;
+        align-items: center;
+    }
+
+    .join-radio label {
+        display: flex;
+        padding-left: 1rem;
+    }
+
+    .join-radio input {
+        width: 24px;
+        height: 24px;
+    }
+
+    .join-button-container button{
+        margin-top: 32px;
+        font-size: 32px;
+    }
+
+    .join-button-container a{
+        margin-top: 32px;
+        font-size: 32px;
+    }
+
+    .join-textline input {
+        font-size: 64px;
     }
 
     footer {    
