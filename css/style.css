@@ -883,6 +883,31 @@ footer {
         font-size: 32px;
     }
 
+    .note-title, .flashcard-title {
+        font-size: 2.4em;
+    }
+
+    .note-body, .note-time, .flashcard-body, .flashcard-time {
+        font-size: 1.6em;
+    }
+
+    .notes-content-title {
+        font-size: 5em;
+    }
+
+    .notes-content-body {
+        font-size: 2em;
+    }
+
+    .flashcards-content {
+        padding: 0rem 4rem;
+        justify-content: flex-start;
+    }
+
+    .notes-add-button, .flashcards-add-button{
+        font-size: 32px;
+    }
+
     footer {    
         padding: 6rem calc((100vw - 1300px) / 2);
     }
